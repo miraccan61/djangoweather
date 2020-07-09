@@ -1,6 +1,27 @@
 {% extends "base.html" %}
-
 {% block content%}
-<h1>Hello Worllld</h1>
-
+<div class="page-content page-container" id="page-content">
+    <div class="padding">
+        <div class="row container d-flex justify-content-center">
+            <div class="col-lg-8 grid-margin stretch-card">
+                <!--weather card-->
+                <div class="card card-weather">
+                    <div class="card-body">
+                        <div class="weather-date-location">
+                            <h3>{{city_name}}</h3>
+                            <p class="text-gray"> <span class="weather-date">{{day}} {{month}} {{year}}  </span> <span class="weather-location">{{ timezone }}</span> </p>
+                        </div>
+                        <div class="weather-data d-flex">
+                            <div class="mr-auto">
+                                <h4 class="display-3">{{app_temp}} <span class="symbol">°</span>C</h4>
+                                <p> {{ description }} </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--weather card ends-->
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
